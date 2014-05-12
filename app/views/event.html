@@ -1,9 +1,10 @@
 <div>
-    <button ng-click="go()">Go</button>
-    <button ng-click="back()">Back</button>
+    <button ng-click="back()" class="btn btn-primary" ng-if="!isFirst()"><i class="glyphicon glyphicon-arrow-left"></i> undo {{getBackName()}}</button>
+    <button ng-click="go()" ng-if="!isLast()" class="btn btn-primary"><i class="glyphicon glyphicon-arrow-right"></i> redo {{getGoName()}}</button>
+    <div history-bar="stackPlease()"></div>
 </div>
 <div class="todo-container">
-    <div todo="todo" ng-repeat="todo in todos" ng-controller="TodoEventCtrl"></div>
+    <div todo="todo" ng-repeat="todo in todos" ng-controller="TodoCtrl"></div>
 </div>
 <form>
     <label for="todo">Add a Todo</label>

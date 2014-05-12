@@ -23,6 +23,7 @@ angular.module('talkUndoApp')
                     action:todoAction,
                 }
                 $scope.todos.push(todo)
+                $scope.todoAction = '';
             },
             back:function() {
                 $scope.todos.splice(_.indexOf($scope.todos,todo));
