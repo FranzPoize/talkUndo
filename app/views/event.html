@@ -1,0 +1,12 @@
+<div>
+    <button ng-click="go()">Go</button>
+    <button ng-click="back()">Back</button>
+</div>
+<div class="todo-container">
+    <div todo="todo" ng-repeat="todo in todos" ng-controller="TodoEventCtrl"></div>
+</div>
+<form>
+    <label for="todo">Add a Todo</label>
+    <input type="text" placeholder="Name the action to do" ng-model="todoAction"></input>
+    <button class="btn btn-success" ng-click="addTodo()">Add</button>
+</form>
